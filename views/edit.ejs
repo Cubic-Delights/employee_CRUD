@@ -1,0 +1,40 @@
+<%- include("partials/header.ejs")%>
+
+<div class="createForm">
+<form action="/update" method="POST">
+    <input type="hidden" name="EmployeeID" value="<%= edata.EmployeeID %>">
+    <label for="EmployeeID">Employee ID: </label><br/>
+    <input type="text" name="EmployeeID" value="<%= edata.EmployeeID %>" disabled/><br/>
+    <label for="FName">First Name: </label><br/>
+    <input type="text" name="FName" value="<%= edata.FirstName %>" /><br/>
+    <label for="LName">Last Name: </label><br/>
+    <input type="text" name="LName" value="<%= edata.LastName %>" /><br/>
+    <label for="DOJ">Date of Joining: </label><br/>
+    <input type="date" name="DOJ" value="<%= edata.DOJ %>"/><br/>
+    <label for="DOB">Date of Birth: </label><br/>
+    <input type="date" name="DOB" value="<%= edata.DOB %>"/><br/>
+    <label for="department">Department:</label><br/>
+    <select name="department" id="department" class="form-select" required>
+        <option value="" disabled selected>Select Department</option>
+        <option value="HR" <%= dname.DeptName === 'HR' ? 'selected' : '' %>>Human Resources</option>
+        <option value="IT" <%= dname.DeptName === 'IT' ? 'selected' : '' %>>IT</option>
+        <option value="Finance" <%= dname.DeptName === 'Finance' ? 'selected' : '' %>>Finance</option>
+        <option value="Marketing" <%= dname.DeptName === 'Marketing' ? 'selected' : '' %>>Marketing</option>
+        <option value="Sales" <%= dname.DeptName === 'Sales' ? 'selected' : '' %>>Sales</option>
+    </select>
+    <label for="location">Location:</label><br/>
+    <select name="location" id="location" class="form-select" required>
+        <option value="" disabled selected>Select Location</option>
+        <option value="Pune" <%= lname.LocName === 'Pune' ? 'selected' : '' %>>Pune</option>
+        <option value="Mumbai" <%= lname.LocName === 'Mumbai' ? 'selected' : '' %>>Mumbai</option>
+        <option value="Delhi" <%= lname.LocName === 'Delhi' ? 'selected' : '' %>>Delhi</option>
+        <option value="Bangalore" <%= lname.LocName === 'Bangalore' ? 'selected' : '' %>>Bangalore</option>
+        <option value="Hyderabad" <%= lname.LocName === 'Hyderabad' ? 'selected' : '' %>>Hyderabad</option>
+    </select>
+    <label for="Email">Email ID: </label><br/>
+    <input type="email" name="Email" value="<%= edata.EmpMail %>"/><br/>
+    <label for="PHNO">Phone Number: </label><br/>
+    <input type="tel" name="PHNO" value="<%= edata.EmpPH %>" /><br/>
+    <input type="submit" value="Update"/>
+</form>
+</div>

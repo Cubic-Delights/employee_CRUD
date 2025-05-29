@@ -1,0 +1,36 @@
+table, th, td {
+      border: 1px solid black;
+      padding: 8px;
+}
+
+td, th{
+    min-width: 130px;
+    text-align: center;
+}
+
+.tableCon, .createForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+}
+
+.createForm{
+    width: 30%;              
+    margin: 10px auto;       
+    border: 2px solid black; 
+    padding: 0px;           
+    border-radius: 10px;
+}
+
+.action{
+    color:white;
+    background-color: #0d6efd;
+    border-radius: 10px;
+    border: 0px;
+}
+
+.createHead{
+    text-align: center;
+}
